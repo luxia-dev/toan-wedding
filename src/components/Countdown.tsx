@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card } from "./ui/cart";
+import { Card } from "./ui/card";
 import { motion } from "motion/react";
 
 interface TimeLeft {
