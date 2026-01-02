@@ -39,3 +39,11 @@
   color: black;
   font-family: "Playfair Display", serif;
 }
+
+.font-merriweather {
+  font-family: "Merriweather", serif;
+}
+
+.font-allura {
+  font-family: "Allura", cursive;
+}

@@ -10,7 +10,9 @@ export default function Invitation() {
   const [openGiftModal, setOpenGiftModal] = useState(false);
   const [openWishForm, setOpenWishForm] = useState(false);
 
-  console.log({ openWishForm });
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name") ?? "Bạn";
+
   const brideImageUrl =
     "https://images.unsplash.com/photo-1522142033000-098287950f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkZSUyMGZsb3dlcnMlMjBib3VxdWV0fGVufDF8fHx8MTc2NzI4MjU4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
   const groomImageUrl =
@@ -25,9 +27,7 @@ export default function Invitation() {
         <Heart className="w-8 h-8 text-rose-400 fill-rose-400 animate-pulse" />
       </div>
 
-      <p className="great-vibes-title text-4xl text-rose-600! italic">
-        Anh Trung và người thương
-      </p>
+      <p className="great-vibes-title text-4xl text-rose-600! italic">{name}</p>
       <div className="flex items-center justify-center gap-2 mt-4">
         <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-rose-300"></div>
         <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
