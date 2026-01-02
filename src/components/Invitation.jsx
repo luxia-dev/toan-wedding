@@ -1,5 +1,5 @@
 import { Heart, MapPin, Clock } from "lucide-react";
-import { Card } from "./ui/cart.tsx";
+import { Card } from "./ui/cart";
 import { Button } from "antd";
 
 export default function Invitation() {
