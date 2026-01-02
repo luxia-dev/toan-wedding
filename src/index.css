@@ -11,8 +11,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* bg-gradient-to-br from-rose-50 via-pink-50 to-amber */
 }
 
 .great-vibes-title {

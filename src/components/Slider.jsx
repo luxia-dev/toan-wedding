@@ -28,9 +28,9 @@ export default function Slider() {
         {[banner1, banner2, banner3].map((src, index) => (
           <SwiperSlide key={index}>
             <img
+              className="w-full h-screen object-cover"
               src={src}
               alt={`banner-${index + 1}`}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </SwiperSlide>
         ))}

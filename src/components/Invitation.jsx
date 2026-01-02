@@ -16,7 +16,7 @@ export default function Invitation() {
   const groomImageUrl =
     "https://images.unsplash.com/photo-1766104804438-28f42f89604f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncm9vbSUyMHN1aXQlMjB3ZWRkaW5nfGVufDF8fHx8MTc2NzI4MjU4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
   return (
-    <div className=" bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 pt-4 px-4">
+    <div className="via-pink-50 to-amber-50 pt-4 px-4">
       <h1 className="great-vibes-title  text-3xl text-emerald-700!">
         Trân Trọng Kính Mời
       </h1>
@@ -24,9 +24,6 @@ export default function Invitation() {
         <Heart className="w-8 h-8 text-rose-400 fill-rose-400 animate-pulse" />
         <Heart className="w-8 h-8 text-rose-400 fill-rose-400 animate-pulse" />
       </div>
-      {/* <h1 className="great-vibes-title  text-3xl text-emerald-700!">
-        Trân Trọng Kính Mời
-      </h1> */}
 
       <p className="great-vibes-title text-4xl text-rose-600! italic">
         Anh Trung và người thương
@@ -69,7 +66,7 @@ export default function Invitation() {
                     </h3>
                   </div>
                 </div>
-                <div className="p-5 bg-gradient-to-br from-rose-50 to-white">
+                <div className="p-5">
                   <div className="space-y-3 flex flex-col">
                     <div className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />
@@ -117,7 +114,7 @@ export default function Invitation() {
                     </h3>
                   </div>
                 </div>
-                <div className="p-5 bg-gradient-to-br from-rose-50 to-white">
+                <div className="p-5">
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />

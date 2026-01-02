@@ -27,7 +27,7 @@ function App() {
     },
   ];
   return (
-    <>
+    <div className="bg-gradient-to-br from-rose-50 via-pink-50">
       {/* <div className="sticky top-0 z-50 bg-white py-3 shadow-sm">
         <h1 className="text-4xl font-bold text-center">Toan Wedding</h1>
       </div> */}
@@ -47,7 +47,7 @@ function App() {
       {/* khoang khac */}
       {/* countdown */}
       {/* loi chuc + qr code */}
-    </>
+    </div>
   );
 }
 
