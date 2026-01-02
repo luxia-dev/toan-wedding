@@ -1,5 +1,5 @@
 // Import Swiper React components
-import { Countdown } from "./CountDown";
+import Countdown from "./CountDown";
 
 export default function Calendar() {
   return (
