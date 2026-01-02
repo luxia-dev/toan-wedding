@@ -1,8 +1,12 @@
-import { Heart, MapPin, Clock } from "lucide-react";
+import { Heart, MapPin, Clock, HandHeart, Gift } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "antd";
 import { motion } from "motion/react";
+import GiftModal from "./Gift/GiftModal";
+import { useState } from "react";
+
 export default function Invitation() {
+  const [openGiftModal, setOpenGiftModal] = useState(false);
   const brideImageUrl =
     "https://images.unsplash.com/photo-1522142033000-098287950f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkZSUyMGZsb3dlcnMlMjBib3VxdWV0fGVufDF8fHx8MTc2NzI4MjU4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
   const groomImageUrl =
@@ -145,6 +149,26 @@ export default function Invitation() {
           </motion.div> */}
         </Card>
       </motion.div>
+
+      <div className="flex justify-center gap-4">
+        <Button
+          className="bg-gradient-to-r! from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white!"
+          size="large"
+        >
+          <HandHeart className="w-5 h-5 mr-1" />
+          Gửi Lời Chúc
+        </Button>
+        <Button
+          className="bg-gradient-to-r! from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white!"
+          size="large"
+          onClick={() => setOpenGiftModal(true)}
+        >
+          <Gift className="w-5 h-5 mr-1" />
+          Gửi Quà Mừng
+        </Button>
+      </div>
+
+      <GiftModal open={openGiftModal} onClose={() => setOpenGiftModal(false)} />
     </div>
   );
 }

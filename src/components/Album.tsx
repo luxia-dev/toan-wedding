@@ -18,7 +18,7 @@ interface Photo {
 
 export default function Album() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
-  const photos = Array.from({ length: 10 }, (_, index) => ({
+  const photos = Array.from({ length: 8 }, (_, index) => ({
     id: index + 1,
     url: img1C7A0065,
     alt: `Photo ${index + 1}`,
@@ -37,18 +37,16 @@ export default function Album() {
   // ];
 
   return (
-    <>
-      <div className="text-center my-8">
-        <h2 className="text-3xl text-rose-700 mb-2 font-serif">
-          Album Ảnh Cưới
-        </h2>
+    <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-rose-100 m-4 mt-16">
+      <div className="text-center">
+        <h2 className="text-3xl text-rose-700 mb-2 font-serif mt-6">Album</h2>
         <div className="flex items-center justify-center gap-2 mt-4">
           <div className="w-16 h-[1px] bg-gradient-to-r from-transparent to-rose-300"></div>
           <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
           <div className="w-16 h-[1px] bg-gradient-to-l from-transparent to-rose-300"></div>
         </div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
         {photos.map((photo, index) => (
           <motion.div
             key={photo.id}
@@ -100,6 +98,6 @@ export default function Album() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </Card>
   );
 }

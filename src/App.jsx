@@ -5,6 +5,7 @@ import Invitation from "./components/Invitation";
 import WishAndQr from "./components/WishAndQr";
 import Album from "./components/Album";
 import Calendar from "./components/Calendar";
+import WishForm from "./components/WishForm";
 
 function App() {
   const photos = [
@@ -35,6 +36,7 @@ function App() {
       <Calendar />
       {/* <WishAndQr /> */}
       <Album photos={photos} />
+      <WishForm />
 
       {/* save the date, chuc mung hanh phuc */}
 
