@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Slider from "./components/Slider";
+import SaveTheDate from "./components/SaveTheDate";
+import Invitation from "./components/Invitation";
+import WishAndQr from "./components/WishAndQr";
+import Album from "./components/Album";
+import Countdown from "./components/Countdown";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="sticky top-0 z-50 bg-white py-3 shadow-sm">
+        <h1 className="text-4xl font-bold text-center">Toan Wedding</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Slider />
+      <SaveTheDate />
+      <Invitation />
+      {/* <WishAndQr /> */}
+      {/* <Album /> */}
+      {/* <Countdown /> */}
+
+      {/* save the date, chuc mung hanh phuc */}
+
+      {/* trann trong kinh moi va don cho ngay chung doi */}
+
+      {/* khoang khac */}
+      {/* countdown */}
+      {/* loi chuc + qr code */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
