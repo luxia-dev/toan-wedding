@@ -5,13 +5,13 @@ import { EffectFade, Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
-import banner1 from "../assets/banner1.jpg";
-import banner2 from "../assets/banner2.jpg";
-import banner3 from "../assets/banner3.jpg";
+import banner1 from "../assets/banner1.webp";
+import banner2 from "../assets/banner2.webp";
+import banner3 from "../assets/banner3.webp";
 
 export default function Slider() {
   return (
-    <div style={{ width: "100%", height: "100%" }}>
+    <div className="w-full h-full mt-14">
       <Swiper
         modules={[Autoplay, EffectFade]}
         spaceBetween={0}

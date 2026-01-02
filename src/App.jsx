@@ -6,6 +6,7 @@ import WishAndQr from "./components/WishAndQr";
 import Album from "./components/Album";
 import Calendar from "./components/Calendar";
 import WishForm from "./components/WishForm";
+import Header from "./components/Header";
 
 function App() {
   const photos = [
@@ -27,9 +28,10 @@ function App() {
   ];
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white py-3 shadow-sm">
+      {/* <div className="sticky top-0 z-50 bg-white py-3 shadow-sm">
         <h1 className="text-4xl font-bold text-center">Toan Wedding</h1>
-      </div>
+      </div> */}
+      <Header />
       <Slider />
       <SaveTheDate />
       <Invitation />

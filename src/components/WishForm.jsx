@@ -1,20 +1,18 @@
 import { Modal, Form, Input, Radio, Button } from "antd";
-import { useState } from "react";
 
-export default function WishForm() {
-  const [open, setOpen] = useState(false);
+export default function WishForm({ open, onClose }) {
   const [form] = Form.useForm();
-
+  console.log({ open });
   const onFinish = (values) => {
     console.log("Submit:", values);
     form.resetFields();
-    // onClose();
+    onClose();
   };
 
   return (
     <Modal
       open={open}
-      onCancel={() => setOpen(false)}
+      onCancel={() => onClose()}
       footer={null}
       centered
       width={520}

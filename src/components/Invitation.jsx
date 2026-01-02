@@ -3,10 +3,14 @@ import { Card } from "./ui/card";
 import { Button } from "antd";
 import { motion } from "motion/react";
 import GiftModal from "./Gift/GiftModal";
+import WishForm from "./WishForm";
 import { useState } from "react";
 
 export default function Invitation() {
   const [openGiftModal, setOpenGiftModal] = useState(false);
+  const [openWishForm, setOpenWishForm] = useState(false);
+
+  console.log({ openWishForm });
   const brideImageUrl =
     "https://images.unsplash.com/photo-1522142033000-098287950f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkZSUyMGZsb3dlcnMlMjBib3VxdWV0fGVufDF8fHx8MTc2NzI4MjU4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
   const groomImageUrl =
@@ -154,6 +158,7 @@ export default function Invitation() {
         <Button
           className="bg-gradient-to-r! from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white!"
           size="large"
+          onClick={() => setOpenWishForm(true)}
         >
           <HandHeart className="w-5 h-5 mr-1" />
           Gửi Lời Chúc
@@ -169,6 +174,7 @@ export default function Invitation() {
       </div>
 
       <GiftModal open={openGiftModal} onClose={() => setOpenGiftModal(false)} />
+      <WishForm open={openWishForm} onClose={() => setOpenWishForm(false)} />
     </div>
   );
 }
