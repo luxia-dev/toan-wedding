@@ -3,18 +3,21 @@ import ModalWrapper from "./ModalWrapper";
 import StepSelectReceiver from "./StepSelectReceiver";
 import StepQRCode from "./StepQRCode";
 
+import nganQr from "../../assets/nganQR.png";
+import toanQr from "../../assets/toanQR.png";
+
 const DATA = {
   bride: {
-    name: "111111111",
-    bank: "VietcomBank",
-    account: "111111111",
-    qr: "/qr-bride.png",
+    name: "PHAM THI KIM NGAN",
+    bank: "VIETCOMBANK",
+    account: "1022491251",
+    qr: nganQr,
   },
   groom: {
-    name: "111111111",
-    bank: "VietcomBank",
-    account: "111111111",
-    qr: "/qr-groom.png",
+    name: "VU TIEN TOAN",
+    bank: "BIDV",
+    account: "2560421313",
+    qr: toanQr,
   },
 };
 
