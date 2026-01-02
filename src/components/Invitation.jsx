@@ -1,7 +1,7 @@
 import { Heart, MapPin, Clock } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "antd";
-
+import { motion } from "motion/react";
 export default function Invitation() {
   const brideImageUrl =
     "https://images.unsplash.com/photo-1522142033000-098287950f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkZSUyMGZsb3dlcnMlMjBib3VxdWV0fGVufDF8fHx8MTc2NzI4MjU4M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
