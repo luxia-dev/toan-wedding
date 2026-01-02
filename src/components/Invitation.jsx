@@ -3,7 +3,8 @@ import vuQuy1 from "../assets/vuQuy1.webp";
 import vuQuy2 from "../assets/vuQuy2.webp";
 import { Heart, Calendar, MapPin, Clock } from "lucide-react";
 import { motion } from "motion/react";
-import { Card } from "./ui/Cart";
+import { Card } from "./ui/cart";
+import { Button } from "antd";
 
 export default function Invitation() {
   const brideImageUrl =
@@ -55,7 +56,7 @@ export default function Invitation() {
                     src={brideImageUrl}
                     alt="Bride"
                     className="w-full h-full object-cover rounded-lg"
-                    // className=" object-cover rounded-lg"
+                  // className=" object-cover rounded-lg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -65,7 +66,7 @@ export default function Invitation() {
                   </div>
                 </div>
                 <div className="p-5 bg-gradient-to-br from-rose-50 to-white">
-                  <div className="space-y-3">
+                  <div className="space-y-3 flex flex-col">
                     <div className="flex items-start gap-3">
                       <Clock className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />
                       <div>
@@ -81,6 +82,7 @@ export default function Invitation() {
                         Thôn Tráng Liệt 1, xã Thanh Hà, thành phố Hải Phòng
                       </p>
                     </div>
+                    <Button className="w-80 self-center !border-rose-600 !text-rose-600" color="pink" >Mở chỉ đường</Button>
                   </div>
                 </div>
               </Card>
@@ -142,6 +144,6 @@ export default function Invitation() {
           </motion.div> */}
         </Card>
       </motion.div>
-    </div>
+    </div >
   );
 }

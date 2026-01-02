@@ -5,13 +5,14 @@
   "type": "module",
   "@app: rootDir": "src",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "antd": "^6.1.3",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",
     "motion": "^12.23.26",
