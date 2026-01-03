@@ -25,15 +25,37 @@ export default function Slider() {
         }}
         speed={800}
       >
-        {[banner1, banner2, banner3].map((src, index) => (
+        <SwiperSlide key="0">
+          <img
+            className="w-full h-screen object-cover object-[20%_center]"
+            src={banner1}
+            alt={`banner-1`}
+          />
+        </SwiperSlide>
+        <SwiperSlide key="1">
+          <img
+            className="w-full h-screen object-cover object-[10%_center]"
+            src={banner2}
+            alt={`banner-2`}
+          />
+        </SwiperSlide>
+        <SwiperSlide key="2">
+          <img
+            className=" h-screen w-full object-cover"
+            src={banner3}
+            alt={`banner-3`}
+          />
+        </SwiperSlide>
+        {/* {[banner1, banner2, banner3].map((src, index) => ( */}
+        {/* {[banner2].map((src, index) => (
           <SwiperSlide key={index}>
             <img
-              className="w-full h-screen object-cover"
+              className="w-full h-screen object-cover object-[20%_center]"
               src={src}
               alt={`banner-${index + 1}`}
             />
           </SwiperSlide>
-        ))}
+        ))} */}
       </Swiper>
     </div>
   );
