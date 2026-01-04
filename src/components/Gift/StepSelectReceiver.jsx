@@ -14,7 +14,7 @@ export default function StepSelectReceiver({ open, onClose, onSelect }) {
           onClick={() => onSelect("bride")}
           className="rounded-xl border-2 border-pink-300 bg-pink-50 py-1 text-center hover:bg-pink-100"
         >
-          <div className="mb-2 text-2xl">💐</div>
+          <div className="mb-2 text-2xl">👰‍♀️</div>
           <div className="font-semibold">Cô Dâu</div>
           {/* <div className="text-sm text-gray-500">Lê Vũ Quy</div> */}
         </button>

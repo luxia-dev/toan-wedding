@@ -41,7 +41,7 @@ export default function Slider() {
         </SwiperSlide>
         <SwiperSlide key="2">
           <img
-            className=" h-screen w-full object-cover"
+            className=" h-screen w-full object-cover md:object-[center_-600px]"
             src={banner3}
             alt={`banner-3`}
           />

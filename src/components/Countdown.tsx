@@ -47,7 +47,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4 md:gap-4 mt-2">
+    <div className="grid grid-cols-4 gap-4 md:gap-12 mt-2">
       {timeUnits.map((unit, index) => (
         <motion.div
           key={unit.label}
@@ -55,7 +55,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <Card className="gap-1 bg-gradient-to-br from-rose-100 to-pink-100 border-rose-200 p-4 text-center shadow-md">
+          <Card className="gap-1 bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl border-0 p-4 text-center shadow-md">
             <motion.div
               key={unit.value}
               initial={{ scale: 1.2, opacity: 0 }}

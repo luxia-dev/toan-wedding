@@ -33,20 +33,20 @@ function App() {
       </div> */}
       <Header />
       <Slider />
-      <SaveTheDate />
       <Invitation />
+      <SaveTheDate />
       <Calendar />
-      {/* <WishAndQr /> */}
       <Album photos={photos} />
       <WishForm />
 
-      {/* save the date, chuc mung hanh phuc */}
-
-      {/* trann trong kinh moi va don cho ngay chung doi */}
-
-      {/* khoang khac */}
-      {/* countdown */}
-      {/* loi chuc + qr code */}
+      <div className="flex flex-col items-center justify-center py-20">
+        <h1 className="font-allura text-4xl text-rose-500 capitalize">
+          Gia đình
+        </h1>
+        <h1 className="font-allura text-4xl text-rose-500 capitalize ">
+          hân hạnh được đón tiếp!
+        </h1>
+      </div>
     </div>
   );
 }
