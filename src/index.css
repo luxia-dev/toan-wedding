@@ -47,3 +47,24 @@
 .font-allura {
   font-family: "Allura", cursive;
 }
+
+.font-marmelad {
+  font-family: "Marmelad", sans-serif;
+}
+
+.save-the-date {
+  position: relative;
+}
+
+.save-the-date::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* mờ 50% */
+  z-index: 0;
+}
+
+.save-the-date > * {
+  position: relative;
+  z-index: 1;
+}

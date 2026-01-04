@@ -11,7 +11,7 @@ import banner3 from "../assets/banner3.webp";
 
 export default function Slider() {
   return (
-    <div className="w-full h-full mt-14">
+    <div className="mt-14">
       <Swiper
         modules={[Autoplay, EffectFade]}
         spaceBetween={0}
@@ -27,14 +27,14 @@ export default function Slider() {
       >
         <SwiperSlide key="0">
           <img
-            className="w-full h-screen object-cover object-[20%_center]"
+            className="w-full h-screen object-cover object-[20%_center] md:object-top"
             src={banner1}
             alt={`banner-1`}
           />
         </SwiperSlide>
         <SwiperSlide key="1">
           <img
-            className="w-full h-screen object-cover object-[10%_center]"
+            className="w-full h-screen object-cover object-[20%_center] md:object-[70%_center] md:object-top lg:object-top"
             src={banner2}
             alt={`banner-2`}
           />
@@ -46,16 +46,6 @@ export default function Slider() {
             alt={`banner-3`}
           />
         </SwiperSlide>
-        {/* {[banner1, banner2, banner3].map((src, index) => ( */}
-        {/* {[banner2].map((src, index) => (
-          <SwiperSlide key={index}>
-            <img
-              className="w-full h-screen object-cover object-[20%_center]"
-              src={src}
-              alt={`banner-${index + 1}`}
-            />
-          </SwiperSlide>
-        ))} */}
       </Swiper>
     </div>
   );
