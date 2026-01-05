@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/thiep-moi-cuoi(/.*)?", "destination": "/index.html" }
+    { "source": "/thiep-moi-cuoi", "destination": "/" },
+    { "source": "/thiep-moi-cuoi/(.*)", "destination": "/$1" }
   ],
   "redirects": [
     { "source": "/", "destination": "/thiep-moi-cuoi", "permanent": true }
