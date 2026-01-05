@@ -46,13 +46,13 @@ export default function Header() {
                 className="flex items-center justify-center "
               >
                 <span
-                  className={`font-serif text-rose-700 transition-all whitespace-nowrap text-2xl`}
+                  className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-4xl`}
                 >
                   Tiến Toàn
                 </span>
                 <Heart className="w-6 h-6 text-rose-500 fill-rose-500 mx-2 animate-bounce" />
                 <span
-                  className={`font-serif text-rose-700 transition-all whitespace-nowrap text-2xl`}
+                  className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-3xl`}
                 >
                   Kim Ngân
                 </span>

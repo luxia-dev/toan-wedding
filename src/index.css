@@ -68,3 +68,9 @@
   position: relative;
   z-index: 1;
 }
+
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: bold;
+  /* font-style:; */
+}
