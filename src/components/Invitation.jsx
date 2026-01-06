@@ -6,9 +6,12 @@ import GiftModal from "./Gift/GiftModal";
 import WishForm from "./WishForm";
 import { useState } from "react";
 import thanhHon from "../assets/thanhHon.png";
+import { useLanguage } from "../hooks/useLanguage";
 
 export default function Invitation() {
+  const { t } = useLanguage();
   const [openGiftModal, setOpenGiftModal] = useState(false);
+
   const [openWishForm, setOpenWishForm] = useState(false);
 
   const params = new URLSearchParams(window.location.search);
@@ -66,8 +69,9 @@ export default function Invitation() {
           }}
           className="great-vibes-title pt-6 font-bold text-4xl md:text-6xl lg:text-8xl  text-rose-700!"
         >
-          Trân Trọng Kính Mời
+          {t("invite_title")}
         </motion.h1>
+
         <div className="inline-flex items-center justify-between px-4 w-full md:px-24">
           <Heart className="w-8 h-8 text-rose-400 fill-rose-400 whileInView-pulse" />
           <Heart className="w-8 h-8 text-rose-400 fill-rose-400 whileInView-pulse" />
@@ -93,8 +97,9 @@ export default function Invitation() {
         >
           <Card className="border-0">
             <h1 className="great-vibes-title text-4xl text-rose-600!">
-              Đến tham dự
+              {t("attend_wedding")}
             </h1>
+
             <div className="grid grid-cols-1 px-3 md:grid-cols-2 md:px-26 gap-6">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -113,7 +118,7 @@ export default function Invitation() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-white text-2xl font-serif">
-                        Lễ Vu Quy
+                        {t("le_vu_quy")}
                       </h3>
                     </div>
                   </div>
@@ -122,16 +127,18 @@ export default function Invitation() {
                       <div className="flex items-center gap-3">
                         <Clock className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="text-gray-800">10:00</p>
-                          <p className="text-gray-600 text-sm">25/01/2026</p>
+                          <p className="text-gray-800 md:text-2xl">10:25</p>
+                          <p className="text-gray-600 text-sm md:text-2xl">
+                            25/01/2026
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          Tại gia đình nhà Gái
+                        <p className="text-gray-700 text-sm leading-relaxed md:text-2xl">
+                          {t("bride_family_address_title")}
                           <br />
-                          Thôn Ngoại Đàm, xã Hà Tây, thành phố Hải Phòng
+                          {t("bride_family_address")}
                         </p>
                       </div>
                       <Button
@@ -140,11 +147,11 @@ export default function Invitation() {
                         onClick={() => {
                           window.open(
                             "https://maps.app.goo.gl/oHxzEinw1Pmc44KV6",
-                            "_blank",
+                            "_blank"
                           );
                         }}
                       >
-                        Mở bản đồ
+                        {t("open_map")}
                       </Button>
                     </div>
                   </div>
@@ -168,25 +175,27 @@ export default function Invitation() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
                     <div className="absolute bottom-4 left-4 right-4">
                       <h3 className="text-white text-2xl font-serif">
-                        Lễ Thành Hôn
+                        {t("le_thanh_hon")}
                       </h3>
                     </div>
                   </div>
                   <div className="p-5">
-                    <div className="space-y-3 flex flex-col">
+                    <div className="space-y-3 flex flex-col md:text-2xl">
                       <div className="flex items-center gap-3">
                         <Clock className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="text-gray-800">12:00</p>
-                          <p className="text-gray-600 text-sm">25/01/2026</p>
+                          <p className="text-gray-800 md:text-2xl">11:15</p>
+                          <p className="text-gray-600 text-sm md:text-2xl">
+                            25/01/2026
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5 text-rose-600 mt-0.5 flex-shrink-0" />
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          Tại gia đình nhà Trai
+                        <p className="text-gray-700 text-sm leading-relaxed md:text-2xl">
+                          {t("groom_family_address_title")}
                           <br />
-                          Thôn Tráng Liệt 1, xã Thanh Hà, thành phố Hải Phòng
+                          {t("groom_family_address")}
                         </p>
                       </div>
                       <Button
@@ -195,11 +204,11 @@ export default function Invitation() {
                         onClick={() => {
                           window.open(
                             "https://maps.app.goo.gl/gDgK5FNvg89nyHYi9",
-                            "_blank",
+                            "_blank"
                           );
                         }}
                       >
-                        Mở bản đồ
+                        {t("open_map")}
                       </Button>
                     </div>
                   </div>
@@ -211,16 +220,16 @@ export default function Invitation() {
           <div className="flex justify-center mt-8 mb-6">
             <Button
               size="large"
-              className="w-86  !border-rose-600 !text-rose-600"
+              className="w-68 md:w-86  !border-rose-600 !text-rose-600"
               color="pink"
               onClick={() => {
                 window.open(
                   "https://maps.app.goo.gl/gmcUbGWC8LG685HB7",
-                  "_blank",
+                  "_blank"
                 );
               }}
             >
-              Hành trình rước dâu 👰‍♀️🤵‍♂️
+              {t("wedding_procession")}
             </Button>
           </div>
 
@@ -231,15 +240,16 @@ export default function Invitation() {
               onClick={() => setOpenWishForm(true)}
             >
               <HandHeart className="w-5 h-5 mr-1" />
-              Gửi Lời Chúc
+              {t("send_wishes")}
             </Button>
+
             <Button
               className="bg-gradient-to-r! from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white!"
               size="large"
               onClick={() => setOpenGiftModal(true)}
             >
               <Gift className="w-5 h-5 mr-1" />
-              Gửi Quà Mừng
+              {t("send_gift")}
             </Button>
           </div>
         </motion.div>

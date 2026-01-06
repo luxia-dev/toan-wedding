@@ -7,8 +7,10 @@ import Album from "./components/Album";
 import Calendar from "./components/Calendar";
 import WishForm from "./components/WishForm";
 import Header from "./components/Header";
+import { useLanguage } from "./hooks/useLanguage";
 
 function App() {
+  const { t } = useLanguage();
   const photos = [
     {
       id: 1,
@@ -41,10 +43,10 @@ function App() {
 
       <div className="flex flex-col items-center justify-center py-20">
         <h1 className="font-allura text-4xl text-rose-500 capitalize">
-          Gia đình
+          {t("family")}
         </h1>
         <h1 className="font-allura text-4xl text-rose-500 capitalize ">
-          hân hạnh được đón tiếp!
+          {t("honored_to_welcome")}
         </h1>
       </div>
     </div>

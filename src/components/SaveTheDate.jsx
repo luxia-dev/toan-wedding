@@ -1,7 +1,9 @@
 import { Heart, Sparkles, CalendarHeart, Clock, MapPin } from "lucide-react";
 import { motion } from "motion/react";
+import { useLanguage } from "../hooks/useLanguage";
 
 export default function SaveTheDate() {
+  const { t } = useLanguage();
   return (
     <div className="mt-10 flex items-center justify-center p-4 overflow-auto ">
       <div className="w-full max-w-md">
@@ -76,11 +78,7 @@ export default function SaveTheDate() {
               className="text-gray-700 text-center leading-relaxed text-justify"
               style={{ fontFamily: "'Quicksand', sans-serif" }}
             >
-              Ngày vui của chúng mình sẽ thật trọn vẹn nếu có bạn ở đó — cùng
-              cười, cùng chúc mừng và cùng lưu lại những khoảnh khắc đáng nhớ.
-              Sự hiện diện của bạn là niềm vui và là món quà ý nghĩa nhất mà
-              chúng mình mong đợi trong ngày đặc biệt này. Rất mong được đón bạn
-              đến chung vui và cùng tạo nên những kỷ niệm thật đẹp!
+              {t("save_the_date_paragraph")}
             </p>
           </motion.div>
 

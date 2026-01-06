@@ -13,6 +13,7 @@ import HKG03849 from "../assets/HKG03849.webp";
 import HKG03857 from "../assets/HKG03857.webp";
 import HKG03902 from "../assets/HKG03902.jpg";
 import HKG03913 from "../assets/HKG03913.webp";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface Photo {
   id: number;
@@ -21,6 +22,7 @@ interface Photo {
 }
 
 export default function Album() {
+  const { t } = useLanguage();
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const photos = [
     {
@@ -95,7 +97,7 @@ export default function Album() {
       <Card className="bg-white/80 backdrop-blur-sm shadow-xl border-rose-100 m-4 mt-16 md:mx-32">
         <div className="text-center">
           <h2 className="text-5xl great-vibes-title text-rose-700 mb-2 font-serif pt-6">
-            Album
+            {t("album_title")}
           </h2>
           <div className="flex items-center justify-center gap-2 mt-4">
             <div className="w-16 h-[1px] bg-gradient-to-r from-transparent to-rose-300"></div>

@@ -1,7 +1,10 @@
 import { Modal, Form, Input, Radio, Button } from "antd";
+import { useLanguage } from "../hooks/useLanguage";
 
 export default function WishForm({ open, onClose }) {
+  const { t } = useLanguage();
   const [form] = Form.useForm();
+
   console.log({ open });
   const onFinish = (values) => {
     console.log("Submit:", values);
@@ -19,7 +22,7 @@ export default function WishForm({ open, onClose }) {
       closeIcon
       title={
         <div style={{ textAlign: "center", color: "#e11d48", fontSize: 22 }}>
-          Gửi Lời Chúc Mừng
+          {t("send_wishes_title")}
         </div>
       }
     >
@@ -30,36 +33,36 @@ export default function WishForm({ open, onClose }) {
         requiredMark={false}
       >
         <Form.Item
-          label="Họ và tên"
+          label={t("full_name")}
           name="fullName"
           rules={[
             {
               required: true,
-              message: "Vui lòng nhập họ tên cho chúng mình biết nhé",
+              message: t("required_name_msg"),
             },
           ]}
         >
-          <Input placeholder="Nhập họ tên của bạn" />
+          <Input placeholder={t("enter_name_placeholder")} />
         </Form.Item>
 
         <Form.Item
-          label="Bạn là"
+          label={t("your_role")}
           name="role"
           initialValue="bride"
           rules={[{ required: true }]}
         >
           <Radio.Group>
-            <Radio value="bride">Bạn cô dâu</Radio>
-            <Radio value="groom">Bạn chú rể</Radio>
+            <Radio value="bride">{t("friend_of_bride")}</Radio>
+            <Radio value="groom">{t("friend_of_groom")}</Radio>
           </Radio.Group>
         </Form.Item>
 
         <Form.Item
-          label="Lời chúc"
+          label={t("wishes_label")}
           name="message"
-          rules={[{ required: true, message: "Vui lòng nhập lời chúc" }]}
+          rules={[{ required: true, message: t("required_wishes_msg") }]}
         >
-          <Input.TextArea rows={4} placeholder="Viết lời chúc của bạn..." />
+          <Input.TextArea rows={4} placeholder={t("wishes_placeholder")} />
         </Form.Item>
 
         <Button
@@ -73,7 +76,7 @@ export default function WishForm({ open, onClose }) {
             marginTop: 8,
           }}
         >
-          Gửi Lời Chúc
+          {t("submit_wishes_btn")}
         </Button>
       </Form>
     </Modal>

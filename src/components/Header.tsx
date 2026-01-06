@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { Heart } from "lucide-react";
 import { motion, useScroll, AnimatePresence } from "motion/react";
+import { useLanguage } from "../hooks/useLanguage";
 
 export default function Header() {
+  const { t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [showEnglish, setShowEnglish] = useState(false);
+
   const { scrollY } = useScroll();
 
   useEffect(() => {
@@ -48,13 +51,14 @@ export default function Header() {
                 <span
                   className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-4xl`}
                 >
-                  Tiến Toàn
+                  {t("groom_name")}
                 </span>
+
                 <Heart className="w-6 h-6 text-rose-500 fill-rose-500 mx-2 animate-bounce" />
                 <span
                   className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-3xl`}
                 >
-                  Kim Ngân
+                  {t("bride_name")}
                 </span>
               </motion.div>
             ) : (
@@ -69,7 +73,7 @@ export default function Header() {
                 <span
                   className={`font-serif text-rose-700 transition-all italic whitespace-nowrap text-2xl`}
                 >
-                  We Get Married
+                  {t("we_get_married")}
                 </span>
               </motion.div>
             )}
