@@ -8,6 +8,7 @@ export const translations = {
     select_receiver: "Chọn người nhận quà",
     return_btn: "Quay lại",
     close_btn: "Đóng",
+    default_name: "Bạn",
 
     // Header
     groom_name: "Tiến Toàn",
@@ -57,6 +58,7 @@ export const translations = {
     // App codes
     family: "家人",
     honored_to_welcome: "很荣幸欢迎您的到来！",
+    default_name: "贵宾",
 
     // Header
     groom_name: "Tiến Toàn", // Names usually stay the same unless specific Chinese provided
