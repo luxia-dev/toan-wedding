@@ -23,7 +23,7 @@ export const translations = {
     bride_family_address_title: "Tại gia đình nhà Gái",
     bride_family_address: "Thôn Ngoại Đàm, xã Hà Tây, thành phố Hải Phòng",
     groom_family_address_title: "Tại gia đình nhà Trai",
-    groom_family_address: "壮烈一村，清河社，海防市",
+    groom_family_address: "Thôn Tráng Liệt 1, xã Thanh Hà, thành phố Hải Phòng",
     open_map: "Mở bản đồ",
     wedding_procession: "Hành trình rước dâu 👰‍♀️🤵‍♂️",
     send_wishes: "Gửi Lời Chúc",
