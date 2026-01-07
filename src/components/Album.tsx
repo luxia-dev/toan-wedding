@@ -13,6 +13,8 @@ import HKG03849 from "../assets/HKG03849.webp";
 import HKG03857 from "../assets/HKG03857.webp";
 import HKG03902 from "../assets/HKG03902.jpg";
 import HKG03913 from "../assets/HKG03913.webp";
+import HKG03883 from "../assets/HKG03883.webp";
+import HKG03905 from "../assets/HKG03905.webp";
 import { useLanguage } from "../hooks/useLanguage";
 
 interface Photo {
@@ -77,12 +79,12 @@ export default function Album() {
     },
     {
       id: 11,
-      url: HKG03839,
+      url: HKG03905,
       alt: "Photo 2",
     },
     {
       id: 12,
-      url: HKG03788,
+      url: HKG03883,
       alt: "Photo 1",
     },
   ];
