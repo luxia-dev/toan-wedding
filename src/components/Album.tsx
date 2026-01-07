@@ -46,7 +46,7 @@ export default function Album() {
       alt: "Photo 2",
     },
     {
-      id: 4,
+      id: 5,
       url: HKG03788,
       alt: "Photo 1",
     },
@@ -74,6 +74,16 @@ export default function Album() {
       id: 10,
       url: HKG03913,
       alt: "Photo 2",
+    },
+    {
+      id: 11,
+      url: HKG03839,
+      alt: "Photo 2",
+    },
+    {
+      id: 12,
+      url: HKG03788,
+      alt: "Photo 1",
     },
   ];
 
