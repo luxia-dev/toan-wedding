@@ -39,7 +39,7 @@ export default function Header() {
           className="flex items-center textgap-2 cursor-pointer"
           // whileHover={{ scale: 1.05 }}
         >
-          <div className="flex items-center gap-2 opacity-80 absolute left-0 top-1/2 -translate-y-1/2 flex flex-col gap-4">
+          <div className="flex items-center opacity-50 absolute left-0 top-10 -translate-y-1/2 flex-col gap-4 z-10">
             <div className="w-16 h-16 relative">
               <div className="absolute inset-0 bg-pink-200 rounded-full blur-sm opacity-50"></div>
               <svg
@@ -54,7 +54,7 @@ export default function Header() {
                 <circle cx="50" cy="50" r="15" fill="#fda4af" />
               </svg>
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 hidden md:block z-15">
               <div className="w-20 h-1 bg-gradient-to-r from-pink-300 to-transparent rounded-full"></div>
               <div className="w-16 h-1 bg-gradient-to-r from-pink-200 to-transparent rounded-full"></div>
             </div>
@@ -91,10 +91,10 @@ export default function Header() {
                   <circle cx="50" cy="50" r="15" fill="#fda4af" />
                 </svg>
               </div>
-              <div className="flex flex-col gap-1">
+              {/* <div className="flex flex-col gap-1">
                 <div className="w-20 h-1 bg-gradient-to-l from-pink-300 to-transparent rounded-full"></div>
                 <div className="w-16 h-1 bg-gradient-to-l from-pink-200 to-transparent rounded-full"></div>
-              </div>
+              </div> */}
             </div>
 
             {/* Hearts decoration */}
@@ -117,7 +117,7 @@ export default function Header() {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex items-center justify-center "
+                className="flex items-center justify-center"
               >
                 <span
                   className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-4xl`}
@@ -127,7 +127,7 @@ export default function Header() {
 
                 <Heart className="w-6 h-6 text-rose-500 fill-rose-500 mx-2 animate-bounce" />
                 <span
-                  className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-3xl`}
+                  className={`pinyon-script-regular text-rose-700 transition-all whitespace-nowrap text-3xl z-20`}
                 >
                   {t("bride_name")}
                 </span>
