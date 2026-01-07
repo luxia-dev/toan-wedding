@@ -7,6 +7,7 @@ import Album from "./components/Album";
 import Calendar from "./components/Calendar";
 import WishForm from "./components/WishForm";
 import Header from "./components/Header";
+import MusicPlayer from "./components/MusicPlayer";
 import { useLanguage } from "./hooks/useLanguage";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <h1 className="text-4xl font-bold text-center">Toan Wedding</h1>
       </div> */}
       <Header />
+      <MusicPlayer />
       <Slider />
       <Invitation />
       <SaveTheDate />
