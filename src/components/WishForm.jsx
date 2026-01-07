@@ -1,14 +1,24 @@
 import { Modal, Form, Input, Radio, Button } from "antd";
 import { useLanguage } from "../hooks/useLanguage";
+import { supabase } from "../lib/supabase";
+
+async function addWish({ fullName, message, role }) {
+  console.log("herere");
+  const { data, error } = await supabase
+    .from("toan-wedding")
+    .insert([{ name: fullName, friend_of: role, wish: message }]);
+  console.log({ data });
+  if (error) throw error;
+
+  return data;
+}
 
 export default function WishForm({ open, onClose }) {
   const { t } = useLanguage();
   const [form] = Form.useForm();
 
-  console.log({ open });
-  const onFinish = (values) => {
-    console.log("Submit:", values);
-    form.resetFields();
+  const onFinish = async (values) => {
+    await addWish(values);
     onClose();
   };
 
