@@ -48,8 +48,12 @@ export const translations = {
               Sự hiện diện của bạn là niềm vui và là món quà ý nghĩa nhất mà
               chúng mình mong đợi trong ngày đặc biệt này. Rất mong được đón bạn
               đến chung vui và cùng tạo nên những kỷ niệm thật đẹp!`,
+    wish_list_title: "Lời chúc từ mọi người",
+    see_wishes: "Xem lời chúc",
   },
   zh: {
+    wish_list_title: "来自大家的祝福",
+    see_wishes: "查看祝福",
     groom_title: "新郎",
     bride_title: "新娘",
     select_receiver: "选择接收者",

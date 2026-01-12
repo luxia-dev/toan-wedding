@@ -1,9 +1,10 @@
-import { Heart, MapPin, Clock, HandHeart, Gift } from "lucide-react";
+import { Heart, MapPin, Clock, HandHeart, Gift, FileHeart } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "antd";
 import { motion } from "motion/react";
 import GiftModal from "./Gift/GiftModal";
 import WishForm from "./WishForm";
+import WishList from "./WishList";
 import { useState } from "react";
 import thanhHon from "../assets/thanhHon.png";
 import { useLanguage } from "../hooks/useLanguage";
@@ -13,6 +14,7 @@ export default function Invitation() {
   const [openGiftModal, setOpenGiftModal] = useState(false);
 
   const [openWishForm, setOpenWishForm] = useState(false);
+  const [openWishList, setOpenWishList] = useState(false);
 
   const params = new URLSearchParams(window.location.search);
   const name = params.get("name") ?? t("default_name");
@@ -147,7 +149,7 @@ export default function Invitation() {
                         onClick={() => {
                           window.open(
                             "https://maps.app.goo.gl/oHxzEinw1Pmc44KV6",
-                            "_blank"
+                            "_blank",
                           );
                         }}
                       >
@@ -204,7 +206,7 @@ export default function Invitation() {
                         onClick={() => {
                           window.open(
                             "https://maps.app.goo.gl/gDgK5FNvg89nyHYi9",
-                            "_blank"
+                            "_blank",
                           );
                         }}
                       >
@@ -225,7 +227,7 @@ export default function Invitation() {
               onClick={() => {
                 window.open(
                   "https://maps.app.goo.gl/gmcUbGWC8LG685HB7",
-                  "_blank"
+                  "_blank",
                 );
               }}
             >
@@ -233,14 +235,22 @@ export default function Invitation() {
             </Button>
           </div>
 
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <Button
               className="bg-gradient-to-r! from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white!"
               size="large"
               onClick={() => setOpenWishForm(true)}
             >
-              <HandHeart className="w-5 h-5 mr-1" />
+              <HandHeart className="w-5 h-5 mx-2" />
               {t("send_wishes")}
+            </Button>
+            <Button
+              className="bg-gradient-to-r! from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white!"
+              size="large"
+              onClick={() => setOpenWishList(true)}
+            >
+              <FileHeart className="w-5 h-5 mx-2" />
+              {t("see_wishes")}
             </Button>
 
             <Button
@@ -259,6 +269,7 @@ export default function Invitation() {
           onClose={() => setOpenGiftModal(false)}
         />
         <WishForm open={openWishForm} onClose={() => setOpenWishForm(false)} />
+        <WishList open={openWishList} onClose={() => setOpenWishList(false)} />
       </div>
     </div>
   );
