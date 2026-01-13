@@ -1,6 +1,7 @@
 import { Modal, Form, Input, Radio, Button } from "antd";
 import { useLanguage } from "../hooks/useLanguage";
 import { supabase } from "../lib/supabase";
+import { useState } from "react";
 
 async function addWish({ fullName, message, role }) {
   console.log("herere");
@@ -16,9 +17,12 @@ async function addWish({ fullName, message, role }) {
 export default function WishForm({ open, onClose }) {
   const { t } = useLanguage();
   const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false);
 
   const onFinish = async (values) => {
+    setLoading(true);
     await addWish(values);
+    setLoading(false);
     onClose();
   };
 
@@ -79,6 +83,7 @@ export default function WishForm({ open, onClose }) {
           type="primary"
           htmlType="submit"
           block
+          loading={loading}
           size="large"
           style={{
             background: "#f72585",
